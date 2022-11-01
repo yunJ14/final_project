@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState,useMemo } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser,faCartPlus,faBars, } from "@fortawesome/free-solid-svg-icons";
+import { faUser,faCartPlus,faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter} from "@fortawesome/free-brands-svg-icons";
 
 
 function Header(){
@@ -50,7 +51,7 @@ function Header(){
                     </ul> 
                     <ul class="social-media">
                         <li><a href="#">
-                            <FontAwesomeIcon icon="fa-brands fa-twitter" />
+                            <FontAwesomeIcon icon={faTwitter} />
                         </a></li>
                         <li><a href="#">
                             

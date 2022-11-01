@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import style from "./sign-up.module.css";
+import style from "./Join.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 //npm install react-router-dom
 //npm install axios
 
-function SignUp() {
+function Join() {
   const [user, setUser] = useState({
     id: "",
     password: "",
@@ -23,13 +23,14 @@ function SignUp() {
     setUser({ ...user, [name]: value });
   }
 
-  function handleBtn(e) {
+  //버튼 누르면 서버로 회원정보 전송
+  function handleJoinBtn(e) {
     e.preventDefault();
     // try {
     //   axios.post('', user)
-    // .then((result) => console.log(result))
+    // .then((response) => console.log(response))
     // .then(alert("회원가입에 성공했습니다!"))
-    // .then(navigate('/'))
+    // .then(window.location.replace('/'))
     // } catch (error){
     //   console.log(error + "실패!");
     // };
@@ -106,7 +107,7 @@ function SignUp() {
         <button
           className={style.button}
           type="submit"
-          onClick={(e) => handleBtn(e)}
+          onClick={(e) => handleJoinBtn(e)}
           disabled={
             !(
               user.id &&
@@ -125,4 +126,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Join;
