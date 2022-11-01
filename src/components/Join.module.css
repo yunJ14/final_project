@@ -12,7 +12,7 @@
 
 .join {
   width: 40%;
-  border: 0.5px solid rgb(143, 131, 131);
+  border: 0.5px solid rgba(143, 131, 131,0.5);
   border-radius: 2%;
   text-align: center;
 }
@@ -31,13 +31,15 @@
 
 .input {
   border-style: none;
-  border-bottom: 1.5px rgb(143, 131, 131) solid;
-  font-size: 14.5px;
+  border-bottom: 1px rgb(143, 131, 131) solid;
+  font-size: 13px;
+  height: 20px;
 }
 
 .input:focus {
   outline: none;
-  border-bottom: 1.5px rgb(249, 217, 36) solid;
+  background :rgba(0,0,0,0.1);
+  border-bottom :none;
 }
 
 .warning {
@@ -49,7 +51,7 @@
 .button {
   margin: 20px 0;
   border: none;
-  background: rgb(249, 217, 36);
+  background: rgba(143, 131, 131);
   width: 30%;
   font-size: 14px;
   height: 40px;
@@ -59,6 +61,6 @@
 }
 
 .button:disabled {
-  background: lightgrey;
-  color: rgba(0, 0, 0, 0.416);
+  background: rgba(0,0,0,0.1);
+  color: rgba(0, 0, 0, 0.5);
 }

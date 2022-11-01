@@ -3,9 +3,6 @@ import style from "./Join.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-//npm install react-router-dom
-//npm install axios
-
 function Join() {
   const [user, setUser] = useState({
     id: "",
@@ -70,7 +67,7 @@ function Join() {
             onChange={(e) => checkId(e) && updateUser(e)}
             type="text"
             name="id"
-            placeholder="아이디를 입력하세요."
+            placeholder="아이디를 입력해주세요."
             className={style.input}
           />
         </div>
@@ -86,7 +83,7 @@ function Join() {
             onChange={(e) => checkPassword(e) && updateUser(e)}
             type="password"
             name="password"
-            placeholder="영어, 숫자, 특수문자로 8~16자"
+            placeholder="영어, 숫자, 특수문자를 조합하여 비밀번호를 입력해주세요."
           />
         </div>
         <div className={style.item}>
