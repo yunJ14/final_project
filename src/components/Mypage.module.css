@@ -1,0 +1,59 @@
+.mypage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-top: 130px;
+  width: 100%;
+}
+.item {
+  text-align: left;
+  width: 30%;
+}
+.title {
+  margin: 10px 0;
+}
+
+.warning {
+  color: red;
+  font-size: 12px;
+  margin: 0 0 2px;
+  text-align: right;
+}
+
+.input {
+  border-style: none;
+  border-bottom: 1px solid rgb(143, 131, 131);
+  outline: none;
+  font-size: 13px;
+  height: 20px;
+  width: 100%;
+}
+
+.input[type="text"] {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hr {
+  border-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  width: 80%;
+}
+
+.button {
+  margin: 20px 0;
+  border: none;
+  background: rgba(143, 131, 131);
+  width: 150px;
+  font-size: 14px;
+  height: 40px;
+}
+.button:enabled {
+  cursor: pointer;
+}
+
+.button:disabled {
+  background: rgba(0,0,0,0.1);
+  color: rgba(0, 0, 0, 0.5);
+}

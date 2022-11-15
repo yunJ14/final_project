@@ -1,42 +1,86 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./Login.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { KAKAO_AUTH_URL } from "../service/OAuth";
 
 function Login(props) {
   const navigate = useNavigate();
+  const [loginUser, setLoginUser] = useState({
+    id: "",
+    password: "",
+  });
 
   function handleLoginBtn(e) {
     e.preventDefault();
 
-    //임시 (아이디 비교 예정)
-    // axios.get('')
-    // .then(response => response.json())
-    // .then(data => console.log(data));
+    // axios.post("http://localhost:8080/",loginUser)
+    // .then(res => console.log(res))
+    // .catch(error => console.log(error));
   }
 
-  //임시로 로그인 클릭시 창 꺼지도록
+  function updateLoginUser(e) {
+    const { value, name } = e.target;
+    setLoginUser({ ...loginUser, [name]: value });
+    //console.log(loginUser);
+  }
+
+  function kakaoLogin() {
+    window.location.href = KAKAO_AUTH_URL;
+  }
+
   return (
     <form className={style.login_form}>
       <div className={style.login}>
-        <h1
-          onClick={() => {
-            props.setLogin(false);
-          }}
+        <h2 className={style.login_title}>로그인</h2>
+        <FontAwesomeIcon
+          icon={faXmark}
+          size="lg"
+          onClick={() => props.setLogin(false)}
+          className={style.close}
+        />
+        <input
+          type="text"
+          className={style.input}
+          placeholder="아이디"
+          name="id"
+          onChange={updateLoginUser}
+        />
+        <input
+          type="password"
+          className={style.input}
+          placeholder="비밀번호"
+          name="password"
+          onChange={updateLoginUser}
+        />
+        <button
+          className={style.login_button}
+          onClick={(e) => handleLoginBtn(e)}
+          disabled={!(loginUser.id && loginUser.password)}
         >
           로그인
-        </h1>
-        <input type="text" placeholder="아이디" />
-        <input type="password" placeholder="비밀번호" />
-        <button onClick={(e) => handleLoginBtn(e)}>로그인</button>
-        <hr />
+        </button>
+        <hr className={style.break}></hr>
         <img
           src="img/kakao_login_medium_narrow.png"
-          alt="kakao login"
-          onClick={(e) => handleLoginBtn(e)}
+          alt="kakao"
+          className={style.kakao}
+          onClick={kakaoLogin}
         />
-        <p>아직 회원이 아니신가요?</p>
-        <p onClick={() => navigate("/join")}>회원가입 하러가기</p>
+        <div className={style.join}>
+          <p>아직 회원이 아니신가요? </p>
+          <p
+            onClick={() => {
+              props.setLogin(false);
+              navigate("/join");
+            }}
+            className={style.join_link}
+          >
+            회원가입
+          </p>
+        </div>
       </div>
     </form>
   );

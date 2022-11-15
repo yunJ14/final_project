@@ -1,0 +1,34 @@
+.num, .title, .date, .content {
+  border-bottom:rgba(143, 131, 131) solid 1px;
+  height: 30px;
+  text-align: center;
+}
+
+.title {
+  padding-left: 15px;
+  text-align: left;
+}
+
+.content {
+  padding : 10px;
+  text-align:left;
+}
+
+.buttons {
+  margin-top: 20px;
+  text-align:center;
+}
+
+.modify {
+  border-style:none;
+  margin-right: 20px;
+  padding: 5px 10px;
+  cursor:pointer;
+}
+
+.delete {
+  border-style:none;
+  background: red;
+  padding:5px 10px;
+  cursor:pointer;
+}

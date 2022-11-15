@@ -10,6 +10,9 @@ import Store from "./routes/Store";
 import Join from "./components/Join";
 import Login from "./components/Login";
 import { useState } from "react";
+import Kakao from "./components/Kakao";
+import Mypage from "./components/Mypage";
+import Inquiry from "./components/Inquiry";
 
 // npm i --save @fortawesome/fontawesome-svg-core
 // npm install --save @fortawesome/free-solid-svg-icons
@@ -18,6 +21,7 @@ import { useState } from "react";
 // npm install --save @fortawesome/free-regular-svg-icons
 // npm install react-router-dom
 // npm install axios
+// npm install @reduxjs/toolkit react-redux
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -29,6 +33,9 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/store" element={<Store />} />
         <Route path="/join" element={<Join />} />
+        <Route path="/oauth/callback/kakao" element={<Kakao />} />
+        <Route path="/mypage" element={<Mypage />} />
+        <Route path="/inquiry" element={<Inquiry />} />
       </Routes>
       <button
         onClick={() => {
@@ -37,7 +44,7 @@ function App() {
       >
         로그인테스트
       </button>
-      {login && <Login login={login} setLogin={setLogin}/>}
+      {login && <Login login={login} setLogin={setLogin} />}
       <Footer />
     </div>
   );

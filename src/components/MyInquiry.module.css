@@ -1,0 +1,39 @@
+.inquiry {
+  margin-top: 30px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  border-style: none;
+  border-spacing: 0px;
+  width: 90%;
+}
+
+.header {
+  border-style: none;
+  background: rgba(143, 131, 131);
+  color: white;
+  text-align: center;
+  height: 40px;
+}
+
+.number {
+  width: 15%;
+}
+
+.title {
+  width: 65%;
+}
+
+.inquiryBtn {
+  margin-top: 50px;
+  border: none;
+  background: rgba(143, 131, 131);
+  width: 150px;
+  font-size: 14px;
+  height: 40px;
+  cursor:pointer;
+}

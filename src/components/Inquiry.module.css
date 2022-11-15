@@ -1,0 +1,49 @@
+.inquiry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+
+.title {
+  padding : 0 30px;
+}
+
+.input {
+  width: 500px;
+  border: 1px solid  rgba(143, 131, 131);
+  border-radius: 3px;
+  height: 35px;
+}
+
+.input[type = "text"]{
+  height: 35px;
+}
+
+.input[id="textarea"]{
+  resize: none;
+  height: 250px;
+}
+
+.button {
+  margin: 20px 0;
+  border: none;
+  background: rgba(143, 131, 131);
+  width: 10%;
+  font-size: 14px;
+  height: 40px;
+}
+.button:enabled {
+  cursor: pointer;
+}
+
+.button:disabled {
+  background: rgba(0,0,0,0.1);
+  color: rgba(0, 0, 0, 0.5);
+}

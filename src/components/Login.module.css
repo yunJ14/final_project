@@ -10,11 +10,90 @@
 
 .login {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  height: 390px;
   left: 50%;
-  top: 40%;
+  top: 25%;
   transform: translateX(-50%);
   background: white;
   color: black;
+}
+
+.login_title {
+  margin: 40px 0;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor:pointer;
+}
+
+.input {
+  border-style: none;
+  border-bottom: 1px rgb(143, 131, 131) solid;
+  font-size: 14px;
+  height: 20px;
+  margin-bottom: 10px;
+  width: 55%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.login_button {
+  margin: 10px 0 15px;
+  border-style: none;
+  width: 183px;
+  height: 45px;
+  border-radius: 5px;
+  background: rgba(143, 131, 131);
+}
+
+.login_button:enabled {
+  cursor: pointer;
+}
+
+.login_button:disabled {
+  background: rgba(0,0,0,0.1);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.break {
+  border-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 65%;
+  text-align: center;
+}
+
+.break::after{
+  content : "소셜로그인";
+  position: relative;
+  top: -10px;
+  font-size: 11px;
+  background: white;
+  padding: 0 10px;
+  color:rgb(143, 131, 131);
+}
+.kakao {
+  margin: 10px 0px 3px;
+  cursor:pointer;
+}
+
+.join{
+  display: flex;
+  font-size: 14px;
+}
+
+.join_link {
+  padding-left: 4px;
+  cursor: pointer;
+}
+.join_link:hover {
+  color:rgb(143, 131, 131);
 }

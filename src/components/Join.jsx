@@ -24,7 +24,7 @@ function Join() {
   function handleJoinBtn(e) {
     e.preventDefault();
     // try {
-    //   axios.post('', user)
+    //   axios.post('http://localhost:8080/user', user)
     // .then((response) => console.log(response))
     // .then(alert("회원가입에 성공했습니다!"))
     // .then(window.location.replace('/'))
@@ -83,7 +83,7 @@ function Join() {
             onChange={(e) => checkPassword(e) && updateUser(e)}
             type="password"
             name="password"
-            placeholder="영어, 숫자, 특수문자를 조합하여 비밀번호를 입력해주세요."
+            placeholder="비밀번호를 입력해주세요."
           />
         </div>
         <div className={style.item}>
