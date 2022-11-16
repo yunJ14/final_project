@@ -31,8 +31,13 @@
   height: 250px;
 }
 
+.fileInfo {
+  font-size: small;
+  margin-bottom: 0;
+}
+
 .button {
-  margin: 20px 0;
+  margin: 10px 0;
   border: none;
   background: rgba(143, 131, 131);
   width: 10%;

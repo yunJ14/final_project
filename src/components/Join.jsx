@@ -23,14 +23,11 @@ function Join() {
   //버튼 누르면 서버로 회원정보 전송
   function handleJoinBtn(e) {
     e.preventDefault();
-    // try {
-    //   axios.post('http://localhost:8080/user', user)
+    // axios.post('http://localhost:8080/user', user)
     // .then((response) => console.log(response))
     // .then(alert("회원가입에 성공했습니다!"))
     // .then(window.location.replace('/'))
-    // } catch (error){
-    //   console.log(error + "실패!");
-    // };
+    // .catch ((error)=> console.log(error + "실패!");
     console.log(user);
   }
 

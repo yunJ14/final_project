@@ -2,34 +2,13 @@ import axios from "axios";
 import React, { useState } from "react";
 import style from "./Inquiry.module.css";
 
-const Inquiry = (props) => {
+const InquiryModify = (props) => {
   const [title, setTitle] = useState("");
   const [main, setMain] = useState("");
   const [file, setFile] = useState("");
 
-  const saveInquiry = async (e) => {
-    // if (file) {
-    //   axios
-    //     .post(`http://localhost:8080/api/inquiry/saveFile`, {
-    //       title: title,
-    //       content: main,
-    //       file: file,
-    //     })
-    //     .then((res) => console.log(res.data))
-    //     .then(alert("문의 등록이 완료되었습니다."))
-    //     .then(window.location.replace('/'))
-    //     .catch((error) => console.log(error));
-    // } else {
-    //   axios
-    //     .post(`http://localhost:8080/api/inquiry/save`, {
-    //       title: title,
-    //       content: main,
-    //     })
-    //     .then((res) => console.log(res.data))
-    //     .then(alert("문의 등록이 완료되었습니다."))
-    //     .then(window.location.replace('/'))
-    //     .catch((error) => console.log(error));
-    // }
+  const saveRewriteInquiry = async (e) => {
+    axios.put();
   };
 
   const handleFile = (e) => {
@@ -76,7 +55,7 @@ const Inquiry = (props) => {
         </tbody>
       </table>
       <button
-        onClick={() => saveInquiry()}
+        onClick={() => saveRewriteInquiry()}
         className={style.button}
         disabled={!(title && main)}
       >
@@ -86,4 +65,4 @@ const Inquiry = (props) => {
   );
 };
 
-export default Inquiry;
+export default InquiryModify;

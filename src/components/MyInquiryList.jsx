@@ -1,24 +1,34 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import InquiryModify from "./InquiryModify";
 import style from "./MyInquiryList.module.css";
 
 function MyInquiryList(props) {
   const [content, setContent] = useState(false);
+
+  let navigate = useNavigate();
 
   function showContent() {
     setContent(!content);
   }
 
   function deleteContent() {
-    console.log("delete");
+    // axios.delete(`http://localhost:8080/api/inquiry/delete/${id}`)
+    // .then(alert("삭제가 완료되었습니다."))
+    // .catch(error => console.log(error));
   }
 
   function modifyContent() {
-    console.log("modify");
+    navigate("/inquiry/modify");
+    // if(props.myInquiry.file){
+    //   axios.put(`http://localhost:8080/api/inquiry/update/${id}`)
+    // }
   }
 
   return (
     <tbody className={style.tbody}>
+      {props.myInquiry && <div>문의가 있어요</div>}
       <tr onClick={showContent}>
         <td className={style.num}>1</td>
         <td className={style.title}>교환하고 싶어요!</td>

@@ -13,6 +13,7 @@ import { useState } from "react";
 import Kakao from "./components/Kakao";
 import Mypage from "./components/Mypage";
 import Inquiry from "./components/Inquiry";
+import InquiryModify from "./components/InquiryModify";
 
 // npm i --save @fortawesome/fontawesome-svg-core
 // npm install --save @fortawesome/free-solid-svg-icons
@@ -36,6 +37,7 @@ function App() {
         <Route path="/oauth/callback/kakao" element={<Kakao />} />
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/inquiry" element={<Inquiry />} />
+        <Route path="/inquiry/modify" element={<InquiryModify />} />
       </Routes>
       <button
         onClick={() => {

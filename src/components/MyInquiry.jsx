@@ -1,16 +1,20 @@
 import axios from "axios";
 import React from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./MyInquiry.module.css";
 import MyInquiryList from "./MyInquiryList";
 
 function MyInquiry(props) {
+  
+  const [myInquiry, setMyInquiry] = useState("");
 
   // useEffect(() => {
-  //   axios.get(
-  //     `http://localhost:8080/inquiry/${id}`.then((res) => console.log(res))
-  //   );
+  //   axios
+  //     .get(`http://localhost:8080/inquiry/${id}`)
+  //     .then((res) => setMyInquiry(res.data))
+  //     .catch((error) => console.log(error));
   // }, []);
 
   let navigate = useNavigate();
@@ -26,7 +30,7 @@ function MyInquiry(props) {
             <td className={style.date}>작성일</td>
           </tr>
         </thead>
-        {<MyInquiryList />}
+        {<MyInquiryList myInquiry={myInquiry}/>}
       </table>
       <button
         className={style.inquiryBtn}
