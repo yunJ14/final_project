@@ -7,6 +7,7 @@ const Kakao = (props) => {
   let code = new URL(window.location.href).searchParams.get("code");
 
   useEffect(() => {
+    // try{
     // axios
     //   .post("http://localhost:8080/auth/kakao/login", code)
     //   .then((res) => {
@@ -18,7 +19,10 @@ const Kakao = (props) => {
       // })
       // .then(alert("로그인 완료"))
       // .then(window.location.replace("/"))
-      // .catch(console.log);
+  // } catch(error){
+      console.log(error);
+  // }
+  
   }, []);
 
   return <Spinner />;

@@ -13,7 +13,7 @@ function Login(props) {
     password: "",
   });
 
-  function handleLoginBtn(e) {
+  const handleLoginBtn = (e) => {
     e.preventDefault();
 
     // axios.post("http://localhost:8080/",loginUser)
@@ -21,13 +21,13 @@ function Login(props) {
     // .catch(error => console.log(error));
   }
 
-  function updateLoginUser(e) {
+  const updateLoginUser = (e) => {
     const { value, name } = e.target;
     setLoginUser({ ...loginUser, [name]: value });
     //console.log(loginUser);
   }
 
-  function kakaoLogin() {
+  const kakaoLogin = () => {
     window.location.href = KAKAO_AUTH_URL;
   }
 

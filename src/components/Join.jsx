@@ -15,43 +15,44 @@ function Join() {
 
   let navigate = useNavigate();
 
-  function updateUser(e) {
+  const updateUser = (e) => {
     const { value, name } = e.target;
     setUser({ ...user, [name]: value });
-  }
+  };
 
   //버튼 누르면 서버로 회원정보 전송
-  function handleJoinBtn(e) {
+  const handleJoinBtn = (e) => {
     e.preventDefault();
-    // axios.post('http://localhost:8080/user', user)
-    // .then((response) => console.log(response))
-    // .then(alert("회원가입에 성공했습니다!"))
-    // .then(window.location.replace('/'))
-    // .catch ((error)=> console.log(error + "실패!");
-    console.log(user);
-  }
+    // try {
+    //   axios.post('http://localhost:8080/user', user)
+    //   .then((response) => console.log(response))
+    //   .then(alert("회원가입에 성공했습니다!"))
+    //   .then(window.location.replace('/'))
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  };
 
   //id 유효성 체크 - 필수
-  function checkId(e) {
+  const checkId = (e) => {
     e.target.value == "" ? setIdCheck(true) : setIdCheck(false);
     return !idCheck;
-  }
+  };
 
   //pw 유효성 체크 - 필수, 8~16자리 영문,숫자,특수문자
-  function checkPassword(e) {
+  const checkPassword = (e) => {
     const pwRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
     setPwCheck(!pwRegex.test(e.target.value));
     return pwRegex.test(e.target.value);
-  }
+  };
 
   //email 유효성 체크 - 필수, 이메일 형식
-  function checkEmail(e) {
+  const checkEmail = (e) => {
     const emailRegex =
       /^([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     setEmailCheck(!emailRegex.test(e.target.value));
-    //if (e.target.value == "") setEmailCheck(false);
     return emailRegex.test(e.target.value);
-  }
+  };
 
   return (
     <form className={style.join_form}>
