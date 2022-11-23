@@ -1,5 +1,8 @@
-.num, .title, .date, .content {
-  border-bottom:rgba(143, 131, 131) solid 1px;
+.num,
+.title,
+.date,
+.content {
+  border-bottom: rgba(143, 131, 131) solid 1px;
   height: 30px;
   text-align: center;
 }
@@ -10,25 +13,25 @@
 }
 
 .content {
-  padding : 10px;
-  text-align:left;
+  padding: 10px;
+  text-align: left;
 }
 
 .buttons {
   margin-top: 20px;
-  text-align:center;
+  text-align: center;
 }
 
 .modify {
-  border-style:none;
+  border-style: none;
   margin-right: 20px;
   padding: 5px 10px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .delete {
-  border-style:none;
+  border-style: none;
   background: red;
-  padding:5px 10px;
-  cursor:pointer;
+  padding: 5px 10px;
+  cursor: pointer;
 }

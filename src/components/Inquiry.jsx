@@ -70,7 +70,9 @@ const Inquiry = (props) => {
             <td></td>
             <td>
               <input type="file" accept="image/*" onChange={handleFile} />
-              <p className={style.fileInfo}>파일 첨부 시 이미지 파일만 가능합니다.</p>
+              <p className={style.fileInfo}>
+                파일 첨부 시 이미지 파일만 가능합니다.
+              </p>
             </td>
           </tr>
         </tbody>
