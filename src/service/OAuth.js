@@ -1,4 +1,3 @@
-
 const REST_API_KEY = process.env.REACT_APP_KAKAO_API_KEY;
 const REDIRECT_URI = "http://localhost:3000/oauth/callback/kakao";
 

@@ -26,6 +26,10 @@ function MyInquiryList(props) {
     // }
   }
 
+  // const showImage = () => {
+  //   axios.get(`http://localhost:8080/img/display?fileSource=${경로}`)
+  // }
+
   return (
     <tbody className={style.tbody}>
       {props.myInquiry && <div>문의가 있어요</div>}

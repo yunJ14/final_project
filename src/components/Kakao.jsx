@@ -12,17 +12,16 @@ const Kakao = (props) => {
     //   .post("http://localhost:8080/auth/kakao/login", code)
     //   .then((res) => {
     //     console.log(res.data);
-        // let accessToken = res.data.accessToken;
-        // let refreshToken = res.headers["refresh-token"];
-        // localStorage.setItem("AC_Token", accessToken);
-        // localStorage.setItem("RF_Token", refreshToken);
-      // })
-      // .then(alert("로그인 완료"))
-      // .then(window.location.replace("/"))
-  // } catch(error){
-      console.log(error);
-  // }
-  
+    // let accessToken = res.data.accessToken;
+    // let refreshToken = res.headers["refresh-token"];
+    // localStorage.setItem("AC_Token", accessToken);
+    // localStorage.setItem("RF_Token", refreshToken);
+    // })
+    // .then(alert("로그인 완료"))
+    // .then(window.location.replace("/"))
+    // } catch(error){
+    //    console.log(error);
+    // }
   }, []);
 
   return <Spinner />;

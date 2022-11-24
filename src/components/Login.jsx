@@ -13,23 +13,32 @@ function Login(props) {
     password: "",
   });
 
-  const handleLoginBtn = (e) => {
+  const handleLoginBtn = async (e) => {
     e.preventDefault();
+    // try {
+    //   const response = await axios.post("http://localhost:8080/",loginUser);
+    //   isLogin = true;
+    // } catch (error){
+    //   console.log(error);
+    // }
+  };
 
-    // axios.post("http://localhost:8080/",loginUser)
-    // .then(res => console.log(res))
-    // .catch(error => console.log(error));
-  }
+  //임시 로그아웃 구현, 메인페이지로 이동
+  // const handleLogout = () => {
+  //   localStorage.removeItem("id");
+  //   isLogin = false;
+  //   navigate('/');
+  // }
 
   const updateLoginUser = (e) => {
     const { value, name } = e.target;
     setLoginUser({ ...loginUser, [name]: value });
     //console.log(loginUser);
-  }
+  };
 
   const kakaoLogin = () => {
     window.location.href = KAKAO_AUTH_URL;
-  }
+  };
 
   return (
     <form className={style.login_form}>
